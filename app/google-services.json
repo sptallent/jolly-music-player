@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "808081098881",
+    "project_id": "jolly-music-player",
+    "storage_bucket": "jolly-music-player.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808081098881:android:11d2ac7a738714e1fd6580",
+        "android_client_info": {
+          "package_name": "sage.musicplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808081098881-dlfhinqgm744apfttr9eeuts4r6qjj0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkEyVr5JM1Zg8SZhgcXgmrJEgDFwkvLzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808081098881-dlfhinqgm744apfttr9eeuts4r6qjj0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
