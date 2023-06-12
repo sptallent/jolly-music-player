@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:name="wave"
+        android:pathData="M0,4 C0,2.9 0.9,2 2,2 L22,2 C23.1,2 24,2.9 24,4 L24,20 C24,21.1 23.1,22 22,22 L2,22 C0.9,22 0,21.1 0,20 L0,4 Z"
+        android:fillColor="#00bcd4"/>
+</vector>
