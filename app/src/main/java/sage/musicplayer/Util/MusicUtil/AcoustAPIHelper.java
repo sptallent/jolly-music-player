@@ -80,7 +80,7 @@ class AcoustThread extends AsyncTask<ArrayList<Song>, MusicInfo, String> {
     private MusicInfoGrabber musicInfoGrabber;
     Context context;
     DatabaseHelper dbHelper = null;
-    private final String API_KEY = "t8CvtNBjJL";
+    private final String API_KEY = "INSERT_KEY";
     final private String acoust_base_url = "https://api.acoustid.org/v2/lookup";
     int count = 0;
     int count_max = 100;
