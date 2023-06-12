@@ -1,5 +1,5 @@
 # Jolly Music Player
-![feature_graphic](https://github.com/sptallent/jolly_music_player/assets/17508350/8c3e1865-5868-4884-baac-9783eab207d2)
+![feature_graphic](https://github.com/sptallent/jolly-music-player/assets/17508350/8c3e1865-5868-4884-baac-9783eab207d2)
 
 ## Description
 A feature-rich music player written in native Java for the Android platform. This project uses the AcoustID project API along with MusicBrainz to accurately identify and tag meta-data associated with individual songs in the user's music library. 
@@ -20,7 +20,7 @@ A feature-rich music player written in native Java for the Android platform. Thi
 ## Installation
 1. Clone the repository
 ```
-git clone https://github.com/sptallent/jolly_music_player.git
+git clone https://github.com/sptallent/jolly-music-player.git
 ```
 2. Import the project into your favorite Java IDE.
 3. Add your API key for AcoustID.
