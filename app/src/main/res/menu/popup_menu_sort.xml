@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/primaryBackgroundColor"
+    android:focusable="true"
+    android:clickable="true">
+    <item
+        android:id="@+id/popup_sort_title_desc"
+        android:title="A - Z"/>
+    <item
+        android:id="@+id/popup_sort_title_asc"
+        android:title="Z - A"/>
+    <item
+        android:id="@+id/popup_sort_date_desc"
+        android:title="Recently Added"/>
+    <item
+        android:id="@+id/popup_sort_date_asc"
+        android:title="Oldest"/>
+    <item
+        android:id="@+id/popup_sort_dur_short"
+        android:title="Short Duration"/>
+    <item
+        android:id="@+id/popup_sort_dur_longest"
+        android:title="Long Duration"/>
+</menu>

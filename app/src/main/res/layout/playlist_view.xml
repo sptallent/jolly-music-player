@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/playlistView"
+    >
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="20sp"
+        android:id="@+id/playlistViewTop"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="?back"
+            android:gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:elevation="2dp"
+            android:id="@+id/playlistViewCross"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/playlistViewTitleText"
+            android:textColor="?attr/primaryAccentColor"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:fontFamily="@font/latobold"
+            android:textSize="16sp"
+            android:padding="20dp"
+            android:textAllCaps="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playlistViewList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="?attr/primaryAccentColor"/>
+
+</LinearLayout>

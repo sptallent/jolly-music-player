@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="2dp"
+    android:scrollbarThumbVertical="?attr/primaryAccentColor"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/new_album_art"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:elevation="2dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:id="@+id/edit_fp_album_image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:fontFamily="@font/latoregular"
+            android:text="@string/tap_the_album_art_to_change_or_remove"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:text="@string/song_title"/>
+
+            <EditText
+                android:id="@+id/edit_fp_song_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:text="@string/artist_name"/>
+
+            <EditText
+                android:id="@+id/edit_fp_artist_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:text="@string/album_title"/>
+
+            <EditText
+                android:id="@+id/edit_fp_album_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:text="@string/genre"/>
+
+            <EditText
+                android:id="@+id/edit_fp_genre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:text="@string/release_date"/>
+
+            <EditText
+                android:id="@+id/edit_fp_release"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:text="@string/track"/>
+
+            <EditText
+                android:id="@+id/edit_fp_track"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="?attr/primaryTextColor"
+                android:fontFamily="@font/latoregular"
+                android:layout_weight="0.5"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/edit_fp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="11sp"
+            android:textAlignment="center"
+            android:textColor="?attr/primaryTextColor"
+            android:fontFamily="@font/latoregular"
+            android:text=""
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sage.musicplayer.MainTab.AlbumsTab"
+    >
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipeRefreshLayout"
+        >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="?attr/primaryAccentColor"
+        android:scrollbarSize="2dp"
+        android:id="@+id/albumRecyclerView"
+        />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:id="@+id/album_shuffle_button"
+        android:background="@drawable/circle_button_sel"
+        android:src="@drawable/shuffle_solid"
+        android:scaleType="fitXY"
+        android:layout_gravity="bottom|end"
+        android:elevation="10dp"
+        android:contentDescription="@string/shuffle"
+        android:layout_margin="10dp"
+        />
+
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/primaryBackgroundColor"
+    android:elevation="8dp"
+    android:padding="20dp"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="@font/latoregular"
+        android:textColor="?attr/primaryAccentColor"
+        android:text="@string/themes"
+        android:textAlignment="center"
+        android:background="@drawable/background_settings_label"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="@font/latoregular"
+        android:textColor="?attr/primaryTextColor"
+        android:text="@string/light_theme"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/background_selector_transparent"
+        android:padding="15dp"
+        android:id="@+id/theme_default_light"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:fontFamily="@font/latoregular"
+        android:textColor="?attr/primaryTextColor"
+        android:text="@string/dark_theme"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/background_selector_transparent"
+        android:padding="15dp"
+        android:id="@+id/theme_default_dark"
+        android:textAlignment="center"
+        />
+
+</LinearLayout>

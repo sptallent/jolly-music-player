@@ -1,0 +1,326 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    app:umanoShadowHeight="4dp"
+    android:visibility="gone"
+    android:elevation="2dp"
+    android:id="@+id/slidingUpPanel"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:umanoPanelHeight="30dp"
+    app:umanoScrollableView="@+id/queue_list">
+
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/songView"
+    android:visibility="invisible"
+    >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="?attr/cross"
+            android:id="@+id/cross"
+            android:layout_gravity="start|center_vertical"
+            android:contentDescription="@string/cross_leave_now_playing"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/songViewTitleText"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/primaryAccentColor"
+            android:gravity="center|center_vertical"
+            android:textSize="16sp"
+            android:padding="20dp"
+            android:textAllCaps="true"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/now_playing"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+        <!--<ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/song_more"
+            android:src="?attr/more"
+            android:padding="5dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/background_selector_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />-->
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:weightSum="1"
+        android:id="@+id/now_playing_dur_container"
+        app:layout_constraintBottom_toTopOf="@+id/albumArtImage"
+        app:layout_constraintTop_toBottomOf="@+id/songViewTitleText"
+        ><!--
+        app:layout_constraintTop_toBottomOf="@+id/songViewTitleText" -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAlignment="textEnd"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="16sp"
+            android:id="@+id/curSeekDur"
+            android:fontFamily="@font/latoregular"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="|"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/maxSeekDur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/latoregular"
+            android:textAlignment="textStart"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/now_playing_container"
+        app:layout_constraintTop_toBottomOf="@+id/songViewTitleText"
+        app:layout_constraintBottom_toTopOf="@+id/now_playing_middle_controls"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        >-->
+
+        <com.savantech.seekarc.SeekArc
+            android:id="@+id/seekDur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:scaleY="-1"
+            app:progressColor="?attr/colorAccent"
+            app:arcColor="?attr/progressIndicatorColor"
+            app:thumbColor="?attr/colorAccent"
+            app:arcWidth="3dp"
+            app:thumbRadius="8dp"
+            app:startAngle="135"
+            app:sweepAngle="270"
+            app:layout_constraintTop_toBottomOf="@+id/songViewTitleText"
+            app:layout_constraintBottom_toTopOf="@+id/now_playing_middle_controls"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/new_album_art"
+            android:id="@+id/albumArtImage"
+            android:elevation="8dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toBottomOf="@+id/songViewTitleText"
+            app:layout_constraintBottom_toTopOf="@+id/now_playing_middle_controls"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+
+    <!--</FrameLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/now_playing_middle_controls"
+        app:layout_constraintBottom_toTopOf="@+id/now_playing_controls"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="?attr/favorite_empty"
+            android:id="@+id/heart_control"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:elevation="2dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/primaryTextColor"
+            android:textSize="16sp"
+            android:id="@+id/nowPlayingArtist"
+            android:fontFamily="@font/latobold"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/secondaryAccentColor"
+            android:textSize="16sp"
+            android:id="@+id/nowPlayingAlbum"
+            android:fontFamily="@font/latoregular"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:id="@+id/now_playing_controls"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="?attr/shuffle2"
+            android:id="@+id/shuffle_control"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="25dp"
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/songViewPrevious"
+            android:src="?attr/prev"
+            android:background="@drawable/button_play_pause"
+            android:scaleType="fitXY"
+            android:elevation="2dp"
+            android:padding="10dp"
+            />
+        <ImageButton
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/songViewPlayPause"
+            android:src="?attr/pause"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/button_play_pause"
+            android:scaleType="fitXY"
+            android:elevation="8dp"
+            android:padding="20dp"
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/songViewNext"
+            android:src="?attr/next"
+            android:background="@drawable/button_play_pause"
+            android:scaleType="fitXY"
+            android:elevation="8dp"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="?attr/loop"
+            android:id="@+id/loop_control"
+            android:layout_marginStart="25dp"
+            android:scaleType="fitXY"
+            android:elevation="2dp"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient_bottom"
+        android:elevation="2dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/primaryBackgroundColor">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="?expand"
+                android:id="@+id/expand"
+                android:layout_gravity="start"
+                android:contentDescription="@string/expand_arrow"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/song_queue"
+                android:fontFamily="@font/latoregular"
+                android:textColor="?attr/primaryAccentColor"
+                android:id="@+id/queueTop"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"/>
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/queue_list"
+            android:scrollbars="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

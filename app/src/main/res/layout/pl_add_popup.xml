@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/primaryBackgroundColor"><!-- primaryBackgroundColor -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pl_name_input_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:elevation="10dp"
+        android:hint="@string/playlist_name_input"
+        android:textColorHint="?attr/primaryAccentColor"
+        android:fontFamily="@font/latoregular"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/pl_create_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pl_name_input"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryAccentColor"
+            android:textColorHint="?attr/primaryAccentColor"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/pl_create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/create_playlist"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="?attr/primaryTextColor"
+        android:background="@drawable/background_selector_transparent"
+        android:fontFamily="@font/latolight"
+        app:layout_constraintTop_toBottomOf="@+id/pl_name_input_wrap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<FrameLayout
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context="sage.musicplayer.MainTab.ArtistTab"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/artistListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:listSelector="@drawable/listview_item_color"
+            android:scrollbars="vertical"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="?attr/primaryAccentColor"
+            />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:id="@+id/artist_shuffle_button"
+        android:background="@drawable/circle_button_sel"
+        android:src="@drawable/shuffle_solid"
+        android:scaleType="fitXY"
+        android:layout_gravity="bottom|end"
+        android:elevation="10dp"
+        android:contentDescription="@string/shuffle"
+        android:layout_margin="10dp"
+        />
+
+</FrameLayout>
+

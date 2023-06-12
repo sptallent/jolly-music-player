@@ -1,0 +1,517 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_frag"
+    tools:context="sage.musicplayer.MainTab.SettingsTab">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="?attr/primaryAccentColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="@string/language"
+            android:background="@drawable/background_settings_label"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_selector_transparent"
+            android:focusable="true"
+            android:clickable="true"
+            android:padding="15dp"
+            android:id="@+id/settings_language_frame">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/latoregular"
+                android:textColor="?attr/primaryTextColor"
+                android:text="@string/language"
+                android:gravity="start|center_vertical"
+                android:id="@+id/settings_language_text"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/latoregular"
+                android:textColor="?attr/primaryTextColor"
+                android:text="@string/english"
+                android:gravity="end|center_vertical"
+                android:id="@+id/settings_language_current"
+                />
+
+        </FrameLayout>
+        -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="@string/equalizer_settings"
+            android:background="@drawable/background_settings_label"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/settings_equalizer_frame">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/equalizer"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/background_selector_transparent"
+            android:padding="15dp"
+            android:layout_gravity="start"
+            android:id="@+id/settings_equalizer"
+            />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/latoregular"
+                    android:textColor="?attr/primaryTextColor"
+                    android:id="@+id/equalizer_on_off"
+                    android:gravity="start|center_vertical"
+                    />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/equalizer_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:thumbTint="?attr/colorAccent"
+                app:trackTint="?attr/primaryTextColor"
+                android:layout_gravity="end|center_vertical"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dynamic_eq_checkbox"
+                android:text="@string/dynamic_eq"
+                android:textColor="?attr/primaryTextColor"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/latoregular"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:theme="@style/checkBoxStyle"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/dynamic_eq_text"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="@string/theme"
+            android:background="@drawable/background_settings_label"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_selector_transparent"
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/theme_frame">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/default_theme"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/background_selector_transparent"
+            android:padding="15dp"
+            android:id="@+id/theme_default"
+            />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/latoregular"
+                    android:textColor="?attr/primaryTextColor"
+                    android:id="@+id/theme_text"
+                    android:gravity="start|center_vertical"
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/theme_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:thumbTint="?attr/colorAccent"
+                    app:trackTint="?attr/primaryTextColor"
+                    android:layout_gravity="end|center_vertical"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_selector_transparent"
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/bgoptions_frame">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/background_options"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/background_selector_transparent"
+            android:padding="15dp"
+            android:layout_gravity="start"
+            android:id="@+id/theme_default_bg"
+            />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/latoregular"
+                    android:textColor="?attr/primaryTextColor"
+                    android:id="@+id/bgoptions_transparent_blur_text"
+                    android:gravity="start|center_vertical"
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/bgoptions_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:thumbTint="?attr/colorAccent"
+                    app:trackTint="?attr/primaryTextColor"
+                    android:layout_gravity="end|center_vertical"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theme_default_bg_change"
+            android:text="@string/change_background_image_to_match_album_art"
+            android:textColor="?attr/primaryTextColor"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/latoregular"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:theme="@style/checkBoxStyle"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_bubbles"
+            android:text="@string/show_bubbles"
+            android:textColor="?attr/primaryTextColor"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/latoregular"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:theme="@style/checkBoxStyle"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="@string/play_queue_options"
+            android:background="@drawable/background_settings_label"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:clickable="true"
+            >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/sleep_timer"
+            android:background="@drawable/background_selector_transparent"
+            android:focusable="true"
+            android:padding="15dp"
+            android:clickable="true"
+            android:gravity="start|center_vertical"
+            android:id="@+id/sleep_timer_text"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:fontFamily="@font/latoregular"
+                android:textColor="?attr/primaryTextColor"
+                android:id="@+id/sleep_time_left_text"
+                android:gravity="end|center_vertical"
+                android:padding="15dp"
+                android:text="@string/hh_mm"
+                />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/playback_open_now_playing"
+            android:text="@string/open_now_playing_on_play"
+            android:textColor="?attr/primaryTextColor"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/latoregular"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:theme="@style/checkBoxStyle"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="@string/storage_options"
+            android:background="@drawable/background_settings_label"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_include_ringtones"
+            android:text="@string/include_ringtones"
+            android:textColor="?attr/primaryTextColor"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/latoregular"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:theme="@style/checkBoxStyle"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/re_scan_music_storage"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/background_selector_transparent"
+            android:padding="15dp"
+            android:id="@+id/re_scan_music"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/reset_fingerprint_database"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/background_selector_transparent"
+            android:padding="15dp"
+            android:id="@+id/reset_fingerprint_database"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="@string/notification_settings"
+            android:background="@drawable/background_settings_label"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/settings_notification_frame">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/latoregular"
+                android:textColor="?attr/primaryTextColor"
+                android:text="@string/show_media_notification"
+                android:focusable="true"
+                android:clickable="true"
+                android:background="@drawable/background_selector_transparent"
+                android:padding="15dp"
+                android:layout_gravity="start"
+                android:id="@+id/settings_notification_text"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="14sp"
+                    android:text="@string/on"
+                    android:fontFamily="@font/latoregular"
+                    android:textColor="?attr/primaryTextColor"
+                    android:id="@+id/notification_on_off"
+                    android:gravity="start|center_vertical"
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/notification_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:thumbTint="?attr/colorAccent"
+                    app:trackTint="?attr/primaryTextColor"
+                    android:layout_gravity="end|center_vertical"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/latobold"
+            android:textColor="?attr/secondaryTextColor"
+            android:text="@string/privacy"
+            android:background="@drawable/background_settings_label"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/show_privacy_policy"
+            android:gravity="start|center_vertical"
+            android:id="@+id/settings_privacy_show"
+            android:background="@drawable/background_selector_transparent"
+            android:focusable="true"
+            android:clickable="true"
+            android:padding="15dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/latoregular"
+            android:textColor="?attr/primaryTextColor"
+            android:text="@string/privacy_policy"
+            android:id="@+id/privacy_policy_view"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

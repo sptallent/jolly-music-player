@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FAFAFA</color>
+    <color name="colorSecondary">#757575</color><!--B2B2B2 -->
+    <color name="colorSecondaryTransparent">#26757575</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#20B2AA</color>
+    <color name= "colorSecondaryAccent">#6B7EFF</color>
+    <color name="colorTransparentAccent">#BF20B2AA</color>
+    <color name="blueHighlight">#5933b5e5</color>
+    <color name="blackTransparent">#BF000000</color>
+    <color name="blackTransparentDark">#E6000000</color>
+    <color name="blackPrimary">#121212</color>
+    <color name="whitePrimary">#EEEEEE</color>
+    <color name="blackGradientPrimary">#0F0F0F</color><!--0E0F13-->
+    <color name="blackGradientSecondary">#414141</color>
+    <color name="transparent">#00000000</color>
+    <color name="whiteTransparent">#BFFAFAFA</color>
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="progress_gray_dark">#FF383838</color>
+    <color name="whiteGradientPrimary">#E0E0E0</color>
+    <color name="whiteGradientSecondary">#BDBDBD</color>
+    <color name="whiteTransparentIndicator">#26FFFFFF</color>
+    <color name="blackTransparentIndicator">#26000000</color>
+    <color name="oceanGradientStart">#396682</color>
+    <color name="oceanGradientEnd">#254354</color>
+</resources>
+
+<!-- <resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#BDBDBD</color>B2B2B2
+<color name="colorWhite">#FFFFFF</color>
+<color name="colorPrimaryDark">#303F9F</color>
+<color name="colorAccent">#dd6c60</color>
+<color name="colorTransparentAccent">#BFdd6c60</color>
+<color name="blueHighlight">#5933b5e5</color>
+<color name="blackTransparent">#BF000000</color>
+<color name="blackTransparentDark">#E6000000</color>
+<color name="blackPrimary">#0E0C0A</color>
+<color name="whitePrimary">#EEEEEE</color>
+<color name="blackGradientPrimary">#414141</color>
+<color name="blackGradientSecondary">#0E0C0A</color>
+<color name="transparent">#00000000</color>
+<color name="whiteTransparent">#BFFFFFFF</color>
+<color name="progress_gray">#FFD8D8D8</color>
+<color name="progress_gray_dark">#FF383838</color>
+<color name="whiteGradientPrimary">#F2F3F2</color>
+<color name="whiteGradientSecondary">#F9F9F8</color>
+    </resources> -->

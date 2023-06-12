@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="sage.musicplayer.MainTab.SongTab">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            >
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_search_view"
+                android:theme="@style/SearchViewStyle"
+                app:iconifiedByDefault="false"
+                app:searchIcon="@null"
+                android:visibility="gone"/>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/song_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:scrollbarSize="2dp"
+                android:scrollbarThumbVertical="?attr/primaryAccentColor"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/manipulation_menu"
+        app:layout_anchor="@id/song_list"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_marginBottom="10dp"
+        >
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:padding="10dp"
+            android:id="@+id/song_tab_search"
+            android:src="@drawable/search"
+            android:scaleType="fitXY"
+            android:background="@drawable/circle_button_sel"
+            android:elevation="2dp"
+            android:contentDescription="@string/search_button">
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:padding="10dp"
+            android:id="@+id/song_tab_sort"
+            android:background="@drawable/circle_button_sel"
+            android:src="@drawable/sort"
+            android:scaleType="fitXY"
+            android:elevation="2dp"
+            android:contentDescription="@string/sort_button" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_gravity="center">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:id="@+id/song_tab_fingerprint"
+            android:background="@drawable/circle_button_sel"
+            android:src="@drawable/fingerprint"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:contentDescription="@string/fingerprint_button" />
+
+            <sage.musicplayer.Util.UIUtil.CircleProgressBar
+                android:id="@+id/fp_button_progress"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminate="false"
+                android:visibility="gone"
+                app:max="100"
+                android:foregroundGravity="center"
+                app:progressBarThickness="2dp"
+                android:layout_gravity="center"
+                />
+
+        </FrameLayout>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:padding="10dp"
+            android:id="@+id/song_tab_shuffle"
+            android:background="@drawable/circle_button_sel"
+            android:src="@drawable/shuffle_solid"
+            android:scaleType="fitXY"
+            android:elevation="2dp"
+            android:contentDescription="@string/shuffle_button" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:padding="14dp"
+            android:id="@+id/song_tab_close"
+            android:background="@drawable/circle_button_sel"
+            android:src="@drawable/cross"
+            android:scaleType="fitXY"
+            android:elevation="2dp"
+            android:contentDescription="@string/close_button" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

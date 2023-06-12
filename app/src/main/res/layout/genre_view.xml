@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/genreView"
+    >
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="20sp"
+        android:id="@+id/genreViewTop"
+        >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="?back"
+                android:gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:elevation="2dp"
+                android:id="@+id/genreViewCross"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/genreViewTitleText"
+                android:textColor="?attr/primaryAccentColor"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:fontFamily="@font/latobold"
+                android:textAllCaps="true"
+                android:padding="20dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/genreViewList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="?attr/primaryAccentColor"/>
+
+</LinearLayout>

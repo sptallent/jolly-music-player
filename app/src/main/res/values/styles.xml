@@ -1,0 +1,253 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">?attr/primaryAccentColor</item>
+        <item name="android:textColorPrimary">?attr/primaryTextColor</item>
+        <item name="android:textColorSecondary">?attr/primaryTextColor</item>
+        <item name="actionMenuTextColor">?attr/primaryTextColor</item>
+        <item name="drawerArrowStyle">?attr/back</item>
+        <item name="android:itemBackground">?attr/primaryBackgroundColor</item>
+        <item name="android:toolbarStyle">@style/ToolBarStyle</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">?attr/primaryBackgroundColor</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">?attr/primaryBackgroundColor</item>
+    </style>
+
+    <style name="ToolBarStyle">
+        <item name="android:background">?attr/primaryBackgroundColor</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+-->
+    <!-- Dark Theme -->
+    <style name="ThemeDark" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">?attr/primaryBackgroundColor</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="colorPrimaryDark">@color/blackPrimary</item>
+        <item name="android:navigationBarColor">@color/blackPrimary</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">?attr/primaryBackgroundColor</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="primaryBackgroundColor">@color/blackPrimary</item>
+        <item name="primaryGradientColor">@color/blackGradientPrimary</item>
+        <item name="secondaryGradientColor">@color/blackGradientSecondary</item>
+        <item name="primaryTextColor">@color/colorPrimary</item>
+        <item name="secondaryTextColor">@color/colorSecondary</item>
+        <item name="primaryAccentColor">@color/colorAccent</item>
+        <item name="secondaryAccentColor">@color/colorSecondaryAccent</item>
+        <item name="primaryTransparentColor">@color/blackTransparent</item>
+        <item name="secondaryTransparentColor">@color/whiteTransparent</item>
+        <item name="transparentAccentColor">@color/colorTransparentAccent</item>
+        <item name="android:toolbarStyle">@style/ToolBarStyle</item>
+        <item name="cross">@drawable/cross</item>
+        <item name="expand">@drawable/expand</item>
+        <item name="collapse">@drawable/collapse</item>
+        <item name="back">@drawable/back</item>
+        <item name="more">@drawable/more</item>
+        <item name="actionBarItemBackground">?attr/primaryBackgroundColor</item>
+
+        <item name="android:itemBackground">?attr/primaryBackgroundColor</item>
+
+        <item name="android:actionBarItemBackground">?attr/primaryBackgroundColor</item>
+        <item name="actionModeStyle">@style/CustomActionModeStyle</item>
+
+        <item name="android:textColorPrimary">?attr/primaryTextColor</item>
+        <item name="android:textColorSecondary">?attr/primaryTextColor</item>
+        <item name="actionMenuTextColor">?attr/primaryTextColor</item>
+        <item name="drawerArrowStyle">?attr/back</item>
+
+        <item name="android:popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="actionModeCloseButtonStyle">?attr/back</item>
+
+        <item name="progressIndicatorColor">@color/whiteTransparentIndicator</item>
+
+        <item name="play">@drawable/play_button</item>
+        <item name="pause">@drawable/pause_button</item>
+        <item name="next">@drawable/next_button</item>
+        <item name="prev">@drawable/prev_button</item>
+        <item name="shuffle">@drawable/shuffle</item>
+        <item name="shuffle2">@drawable/shuffle2</item>
+        <item name="loop">@drawable/loop</item>
+        <item name="favorite_empty">@drawable/star_empty</item>
+        <item name="favorite_filled">@drawable/star_filled</item>
+
+
+        <item name="android:timePickerStyle">@style/TimePickerDialogTheme</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- Light Theme -->
+    <style name="ThemeLight" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="android:statusBarColor">@color/whitePrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="colorPrimaryDark">@color/whitePrimary</item>
+        <item name="android:navigationBarColor">@color/whitePrimary</item>
+        <item name="android:itemBackground">?attr/primaryBackgroundColor</item>
+        <item name="actionBarItemBackground">?attr/primaryBackgroundColor</item>
+        <item name="primaryBackgroundColor">@color/whitePrimary</item>
+        <item name="primaryGradientColor">@color/whiteGradientPrimary</item>
+        <item name="secondaryGradientColor">@color/whiteGradientSecondary</item>
+        <item name="primaryTextColor">@color/blackPrimary</item>
+        <item name="secondaryTextColor">@color/colorSecondary</item>
+        <item name="primaryAccentColor">@color/colorAccent</item>
+        <item name="secondaryAccentColor">@color/colorSecondaryAccent</item>
+        <item name="primaryTransparentColor">@color/whiteTransparent</item>
+        <item name="secondaryTransparentColor">@color/blackTransparent</item>
+        <item name="transparentAccentColor">@color/colorTransparentAccent</item>
+        <item name="android:toolbarStyle">@style/ToolBarStyle</item>
+        <item name="cross">@drawable/cross_dark</item>
+        <item name="expand">@drawable/expand_dark</item>
+        <item name="collapse">@drawable/collapse_dark</item>
+        <item name="back">@drawable/back_dark</item>
+        <item name="more">@drawable/more_dark</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">?attr/primaryBackgroundColor</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarItemBackground">?attr/primaryBackgroundColor</item>
+        <item name="actionModeStyle">@style/CustomActionModeStyle</item>
+
+        <item name="android:textColorPrimary">?attr/primaryTextColor</item>
+        <item name="android:textColorSecondary">?attr/primaryTextColor</item>
+        <item name="actionMenuTextColor">?attr/primaryTextColor</item>
+        <item name="drawerArrowStyle">?attr/back</item>
+
+        <item name="android:popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="actionModeCloseButtonStyle">?attr/back</item>
+
+        <item name="progressIndicatorColor">@color/blackTransparentIndicator</item>
+
+        <item name="play">@drawable/play_dark</item>
+        <item name="pause">@drawable/pause_button_dark</item>
+        <item name="next">@drawable/next_button_dark</item>
+        <item name="prev">@drawable/prev_button_dark</item>
+        <item name="shuffle">@drawable/shuffle_dark</item>
+        <item name="shuffle2">@drawable/shuffle_dark2</item>
+        <item name="loop">@drawable/loop_dark</item>
+        <item name="favorite_empty">@drawable/star_empty_dark</item>
+        <item name="favorite_filled">@drawable/star_dark</item>
+
+        <item name="android:timePickerStyle">@style/TimePickerDialogTheme</item>
+    </style>
+
+    <style name="SplashTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="cross">@drawable/cross</item>
+        <item name="expand">@drawable/expand</item>
+        <item name="collapse">@drawable/collapse</item>
+        <item name="back">@drawable/back</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="popupMenuStyle" parent="@android:style/Widget.PopupMenu">
+        <item name="android:itemBackground">@drawable/background_selector_bg</item>
+        <item name="android:textColor">?attr/primaryTextColor</item>
+        <item name="android:fontFamily">@font/latoregular</item>
+    </style>
+
+    <style name="circularProgressIndicatorColor" parent="">
+        <item name="colorPrimary">@color/colorAccent</item>
+    </style>
+
+    <style name="circularProgressIndicator" parent="Widget.MaterialComponents.ProgressIndicator">
+        <item name="materialThemeOverlay">@style/circularProgressIndicatorColor</item>
+        <!--<item name="trackThickness">10dp</item>-->
+    </style>
+
+    <declare-styleable name="CircularSeekBar">
+        <attr name="progress_seek" format="integer"/>
+        <attr name="max_seek" format="integer" />
+        <attr name="move_outside_circle" format="boolean"/>
+        <attr name="maintain_equal_circle" format="boolean"/>
+        <attr name="use_custom_radii" format="boolean"/>
+        <attr name="lock_enabled" format="boolean"/>
+        <attr name="circle_x_radius" format="dimension" />
+        <attr name="circle_y_radius" format="dimension" />
+        <attr name="circle_stroke_width" format="dimension" />
+        <attr name="pointer_radius" format="dimension" />
+        <attr name="pointer_halo_width" format="dimension" />
+        <attr name="pointer_halo_border_width" format="dimension"/>
+        <attr name="circle_color" format="color"/>
+        <attr name="circle_progress_color" format="color"/>
+        <attr name="pointer_color" format="color"/>
+        <attr name="pointer_halo_color" format="color"/>
+        <attr name="pointer_halo_color_ontouch" format="color"/>
+        <attr name="pointer_alpha_ontouch" format="integer"/>
+        <attr name="start_angle" format="float"/>
+        <attr name="end_angle" format="float"/>
+        <attr name="circle_fill" format="color"/>
+    </declare-styleable>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/whiteTransparent</item>
+    </style>
+
+    <style name="CustomActionModeStyle" parent="Base.Widget.AppCompat.ActionMode">
+        <item name="background">?attr/primaryBackgroundColor</item>
+        <item name="actionModeCloseDrawable">?attr/back</item>
+        <item name="android:textColor">?attr/primaryTextColor</item>
+        <item name="actionMenuTextColor">?attr/primaryTextColor</item>
+        <item name="titleTextStyle">@style/CustomeActionModeTextStyle</item>
+        <item name="subtitleTextStyle">@style/CustomActionModeTextStyle</item>
+    </style>
+
+    <style name="CustomActionModeTextStyle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/primaryTextColor</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">?attr/primaryTextColor</item>
+        <item name="android:background">?attr/primaryBackgroundColor</item>
+    </style>
+
+    <style name="MySpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">?attr/primaryTextColor</item>
+        <item name="android:background">?attr/primaryBackgroundColor</item>
+        <item name="colorControlNormal">?attr/primaryTextColor</item>
+        <item name="colorControlActivated">?attr/primaryTextColor</item>
+    </style>
+
+    <style name="MySwitchStyle">
+        <item name="android:thumbTint">?attr/colorAccent</item>
+        <item name="android:trackTint">?attr/primaryBackgroundColor</item>
+    </style>
+
+    <style name="TimePickerDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <!-- Customize the text color -->
+        <item name="android:textColor">?attr/primaryTextColor</item>
+
+        <!-- Customize the background color -->
+        <item name="android:background">?attr/primaryBackgroundColor</item>
+
+        <!-- Customize the color of the OK and Cancel buttons -->
+        <item name="colorAccent">?attr/colorAccent</item>
+    </style>
+
+</resources>

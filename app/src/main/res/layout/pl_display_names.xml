@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?primaryBackgroundColor"
+    android:elevation="8dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/playlistAddNamesTop"
+        android:textColor="?attr/primaryAccentColor"
+        android:textSize="16sp"
+        android:fontFamily="@font/latoregular"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/playlists"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/background_settings_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/playlistAddNames"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/playlistAddNamesTop"
+        android:divider="@color/transparent"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/background_selector"
+        android:scrollbars="vertical"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="?attr/primaryAccentColor"
+        android:fadeScrollbars="false"
+        android:id="@+id/playlistAddNames"
+        android:focusable="true"
+        android:clickable="true"
+        />
+
+</LinearLayout>

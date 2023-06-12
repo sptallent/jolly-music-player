@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/primaryBackgroundColor"
+    android:orientation="vertical"
+    android:elevation="2dp">
+
+    <ImageView
+        android:id="@+id/fp_album"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/new_album_art"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fp_progress"/>
+
+    <ProgressBar
+        android:id="@+id/fp_progress"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/fp_progress_style"
+        app:layout_constraintWidth_percent="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/fp_album"
+        app:layout_constraintBottom_toTopOf="@+id/fp_progress_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fp_progress_text"
+        android:textColor="?attr/primaryAccentColor"
+        android:text="@string/scanning_files"
+        android:textSize="14sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:fontFamily="@font/latoregular"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fp_progress"
+        app:layout_constraintBottom_toTopOf="@+id/fp_file_name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fp_file_name"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="14sp"
+        android:paddingBottom="5dp"
+        android:fontFamily="@font/latoregular"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fp_progress_text"
+        app:layout_constraintBottom_toTopOf="@+id/fp_scroll"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toBottomOf="@+id/fp_file_name"
+        app:layout_constraintBottom_toTopOf="@+id/fp_cancel_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:foregroundGravity="left"
+        android:id="@+id/fp_scroll"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="2dp"
+        android:scrollbarThumbVertical="?attr/primaryAccentColor"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_gravity="start"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryAccentColor"
+                android:textSize="16sp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"
+                android:text="@string/song_title"
+                />
+
+            <TextView
+                android:id="@+id/fp_song"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryAccentColor"
+                android:textSize="16sp"
+                android:text="@string/artist_name"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:id="@+id/fp_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryAccentColor"
+                android:textSize="16sp"
+                android:text="@string/album_title"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:id="@+id/fp_album_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryAccentColor"
+                android:textSize="16sp"
+                android:text="@string/genre"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:id="@+id/fp_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryAccentColor"
+                android:textSize="16sp"
+                android:text="@string/release_date"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:id="@+id/fp_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryAccentColor"
+                android:textSize="16sp"
+                android:text="@string/track"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+            <TextView
+                android:id="@+id/fp_track_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="18sp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/latoregular"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/fp_cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/cancel_scan"
+        android:textSize="16sp"
+        android:foregroundGravity="center"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="?attr/primaryTextColor"
+        android:background="@drawable/background_selector_transparent"
+        android:fontFamily="@font/latolight"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

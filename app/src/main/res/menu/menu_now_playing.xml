@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background_gradient"
+    android:focusable="true"
+    android:clickable="true">
+
+    <item
+        android:id="@+id/popup_equalizer"
+        android:title="@string/equalizer"/>
+
+    <item
+        android:id="@+id/popup_sleep_timer"
+        android:title="@string/sleep_timer"/>
+
+    <item
+        android:id="@+id/popup_goto_artist"
+        android:title="@string/goto_artist"/>
+    <item
+        android:id="@+id/popup_goto_album"
+        android:title="@string/goto_album"/>
+
+    <item
+        android:id="@+id/popup_add_playlist"
+        android:title="@string/add_to_playlist"/>
+</menu>
