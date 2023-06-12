@@ -18,7 +18,10 @@ A feature-rich music player written in native Java for the Android platform. Thi
 - Sleep timer to drift off to your favorite melodies.
 
 ## Installation
-1. Clone the repository '''git clone https://github.com/sptallent/jolly_music_player.git'''
+1. Clone the repository
+'''
+git clone https://github.com/sptallent/jolly_music_player.git
+'''
 2. Import the project into your favorite Java IDE.
 3. Add your API key for AcoustID.
 4. Build and run the application.
