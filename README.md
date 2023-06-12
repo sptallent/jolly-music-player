@@ -28,6 +28,12 @@ A feature-rich music player written in native Java for the Android platform. Thi
 2. Browse and select your favorite songs, albums, or artists to start playing your music.
 3. Explore the various features like automatic metadata lookup, intuitive organization, themes, and more.
 
+## Known Issues:
+
+1. Theme changing can cause the music service to be reset which requires the user to press next song before music will be played again.
+2. Using the notification media controls while there isn't a song queue can cause the application to crash.
+3. Input from external devices can send playNext and playPrev to the MusicService but play/pause doesn't seem to be working.
+
 ## Contributing
 Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
 
