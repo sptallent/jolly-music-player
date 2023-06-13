@@ -44,8 +44,8 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
-- [AcoustID](https://acoustid.org/) - AcoustID is a project providing a unique identifier for audio recordings by analyzing their acoustic fingerprint. We would like to thank AcoustID for their contribution to the automatic music metadata lookup feature in Jolly Music Player.
-- [MusicBrainz](https://musicbrainz.org/) - MusicBrainz is an open music encyclopedia that collects and makes available music metadata. We would like to express our gratitude to MusicBrainz for their valuable database, which enhances the accuracy and completeness of the music metadata in Jolly Music Player.
+- [AcoustID](https://acoustid.org/) - AcoustID is a project providing a unique identifier for audio recordings by analyzing their acoustic fingerprint.
+- [MusicBrainz](https://musicbrainz.org/) - MusicBrainz is an open music encyclopedia that collects and makes available music metadata.
 - [Glide](https://github.com/bumptech/glide) by Google - A fast and efficient image loading library for Android.
 - [SmartTabLayout](https://github.com/ogaclejapan/SmartTabLayout) by Ogaclejapan - A custom ViewPager title strip that gives you a smooth and customizable tab layout.
 - [AudioVisualizer](https://github.com/gautamchibde/android-audio-visualizer) by Gautam Chibde - A customizable audio visualizer for Android.
