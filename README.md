@@ -52,5 +52,5 @@ This project is licensed under the [MIT License](LICENSE).
 - [SeekArc](https://github.com/savantech/SeekArc) by SavanTech - A circular seek bar library for Android.
 
 ## Contact
-For any questions or inquiries, please contact [samuel.tallent00@gmail.com].
+For any questions or inquiries, please contact samuel.tallent00@gmail.com.
 
